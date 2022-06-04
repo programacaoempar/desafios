@@ -1,12 +1,17 @@
 package desafios;
 
 public class ParImpar {
+    public static void main(String[] args) {
+        int numero = 48;
+        String resultado = "";
 
-    public String classifica(Integer numero){
+        if (numero % 2 == 0) {
+            resultado = "É Par";
 
-
-
-        return "";
+        } else if (numero % 2 == 1) {
+            resultado = "É Impar";
+        }
+        System.out.println(resultado);
     }
 
 }
