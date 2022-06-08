@@ -1,5 +1,4 @@
 package desafios;
-
 import java.util.Arrays;
 
 public class SomaNumerosMenores {
