@@ -14,8 +14,6 @@ class FilterNumberTest {
 		FilterNumber filterNumber = new FilterNumber();
 
 		assertEquals( 3, filterNumber.filtra( newList ).size() );
-
-
 	}
 
 }
