@@ -2,6 +2,7 @@ package desafios;
 
 import static java.util.Arrays.asList;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,7 +11,6 @@ public class FilterNumber {
 	private boolean validateIsNumber(String value) {
 		try {
 			Integer.parseInt( value );
-
 		} catch (Exception e) {
 			return false;
 		}
@@ -19,9 +19,13 @@ public class FilterNumber {
 
 	public List<String> filtra(String[] newList) {
 		List<String> stringList = asList( newList );
-		List<String> result = stringList.stream()
-				.filter( value -> validateIsNumber( value ) )
-				.collect( Collectors.toList() );
+		
+		List<String> result = new ArrayList<>();
+		for (int i = 0; i < stringList.size(); i++) {
+			if(validateIsNumber( stringList.get(i) )){
+				result.add(stringList.get(i));
+			}
+		}
 		return result;
 	}
 }
